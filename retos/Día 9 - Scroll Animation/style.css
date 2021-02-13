@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  display: flex;
+  background-color: steelblue;
+  color: #fff;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: offset-x | offset-y | blur-radius | color */
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+  transform: translateX(300%);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-300%);
+  /* nth-of-type selecciona grupos de hermanos: box. (even)= todos si pusiera un dos, solo seleccionaria el elemento 2.*/
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
